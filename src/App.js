@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     const getTasks = async () => {
-      const tasksFromServer = await fetchTask()
+      const tasksFromServer = await fetchTasks()
       setTasks(tasksFromServer)
     }
 
@@ -21,9 +21,16 @@ const App = () => {
   }, [])
 
   // Fetch Tasks
-
-  const fetchTask = async () => {
+  const fetchTasks = async () => {
     const res = await fetch('http://localhost:5000/tasks')
+    const data = await res.json()
+
+    return data
+  }
+
+  // Fetch Task
+  const fetchTask = async (id) => {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`)
     const data = await res.json()
 
     return data
