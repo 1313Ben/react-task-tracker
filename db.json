@@ -16,7 +16,13 @@
       "id": "3",
       "text": "Doctors Appointment three",
       "day": "Feb 5th",
-      "reminder": "true"
+      "reminder": true
+    },
+    {
+      "text": "Task 4",
+      "day": "undefined",
+      "reminder": false,
+      "id": "fVqcH0v"
     }
   ]
 }
